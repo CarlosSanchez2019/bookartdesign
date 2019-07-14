@@ -50,13 +50,14 @@ html(lang="es")
             blockquote -La inspiración existe pero debe encontrarse trabajando.-
             cite Pablo Picasso
         aside
-            h5 ¿Eres Artista? Queremos conocer tus obras
-            form(action="/enviar", method="post")
-                input(type="text" id="name" name="name" required )
-                label(for="name") Nombre
-                input(type="email" id="email" name="email" required )
-                label(for="email") Correo Electrónico
-                textarea(name="asuntoTxt", cols="30", rows="10" id="asuntoTxt" placeholder="Escriba Aqui")
-                button(type="submit") Enviar
+            .contenedor-form
+                h5 ¿Eres Artista? Queremos conocer tus obras
+                form(action="/enviar", method="post")
+                    input(type="text" id="name" name="name" required )
+                    label(for="name") Nombre
+                    input(type="email" id="email" name="email" required )
+                    label(for="email") Correo Electrónico
+                    textarea(name="asuntoTxt", cols="30", rows="10" id="asuntoTxt" placeholder="Escriba Aqui")
+                    button(type="submit") Enviar
         include partials/_footer.pug
                 
