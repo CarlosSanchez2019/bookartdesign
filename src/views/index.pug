@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        //- Global site tag (gtag.js) - Google Analytics
+        script(async src="https://www.googletagmanager.com/gtag/js?id=UA-143820540-1")
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-143820540-1');
+        meta(charset="UTF-8")
+        meta(name="desciption" content="Book art and design - Guía Nacional de las Artes Visuales del Uruguay")
+        meta(name="keywords" content="Arte, Arte Uruguay, Guía Nacional de las Artes Visuales, Turismo, Book art and Design")
+        meta(name="author" content="Book Art & Design")
+        meta(property="og:title" content="Book Art & Design")
+        meta(property="og:image" content="/img/favicon.jpg")
+        meta(property="og:description" content="Guía Nacional de las Artes Vusuales del Uruguay")
+        meta(property="og:url" content="http://www.bookart.com.uy")
+        meta(name="twitter:title" content="Book Art & Design")
+        meta(name="twitter:description" content="Guía Nacional de las Artes Vusuales del Uruguay")
+        meta(name="twitter:site" content="@bookartdesignuy")
+        meta(name="twitter:image:src" content="/img/favicon.jpg")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Book Art Design
+        include partials/_head.pug
+    body
+        include partials/_header.pug
+        .slider
+            h1  Edición 2020 - Book Art & Design 
+            a(href="/inscripciones") Inscribirse
+            .tooltips
+                p Ahora somos la guía nacional de Artes Plásticas, reservate un lugar en la Edición 2020.
+
+        section
+            h2  Ediciones
+            .contenedor-secciones
+                article.ediciones
+                    img(src="/img/2015.jpg", alt="Edición 2015 Libro")
+                    h3 Edición 2015
+                    a(href="https://issuu.com/bookartdesign/docs/edici__n_2015_issuu", target="_blank", rel="noopener noreferrer") Ver más...
+                article.ediciones
+                    img(src="/img/2016.jpg", alt="Edición 2015 Libro")
+                    h3 Edición 2016
+                    a(href="https://issuu.com/bookartdesign/docs/edici__n_2016", target="_blank", rel="noopener noreferrer") Ver más...
+                article.ediciones
+                    img(src="/img/2017.jpg", alt="Edición 2015 Libro")
+                    h3 Edición 2017
+                    a(href="https://issuu.com/bookartdesign/docs/images-2",target="_blank", rel="noopener noreferrer") Ver más...
+                article.ediciones
+                    img(src="/img/2018.jpg", alt="Edición 2015 Libro")
+                    h3 Edición 2018
+                    a(href="https://issuu.com/bookartdesign/docs/bookart2018",target="_blank", rel="noopener noreferrer") Ver más...
+        section
+            h2 Nuestros Artistas
+            .contenedor-gral    
+                .contendor-artistas
+                    .contendor-slider
+                        img(src="/img/1883-obra.jpg", alt="")
+                    .contendor-slider
+                        img(src="/img/caro.jpg", alt="")
+                    .contendor-slider
+                        img(src="/img/sebastian.jpg", alt="")
+                .next &#62;
+                .prev &#60;
+        
+        .cita
+            blockquote -La inspiración existe pero debe encontrarse trabajando.-
+            cite Pablo Picasso
+        aside
+            h5 ¿Eres Artista? Queremos conocer tus obras
+            form(action="/enviar", method="post")
+                input(type="text" id="name" name="name" required )
+                label(for="name") Nombre
+                input(type="email" id="email" name="email" required )
+                label(for="email") Correo Electrónico
+                textarea(name="asuntoTxt", cols="30", rows="10" id="asuntoTxt" placeholder="Escriba Aqui")
+                button(type="submit") Enviar
+        include partials/_footer.pug
+                
