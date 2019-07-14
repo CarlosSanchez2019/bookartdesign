@@ -30,7 +30,7 @@ router.post('/enviar',urlencodedParser, (req, res) => {
         service: 'gmail',
         auth: {
           user: 'carlosdaniel8@gmail.com',
-          pass: process.env.CONTRASENA_MAIL
+          pass: '43543071Dd$'
         }
       });
       
