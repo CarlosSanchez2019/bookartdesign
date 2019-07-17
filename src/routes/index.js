@@ -24,6 +24,12 @@ router.get('/inscripciones', (req, res)  => {
     })
 })
 
+router.get('/nuestrosartistas', (req, res) =>{
+  res.render('artistas', {
+    title: 'Artistas de la Guía Nacional de las Artes Visuales'
+  })
+})
+
 router.post('/enviar',urlencodedParser, (req, res) => {
     
     var transporter = nodemailer.createTransport({

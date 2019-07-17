@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Nustros Artistas | Book Art & Design
+        include partials/_head.pug
+    body
+        include partials/_header.pug
+        .quienessomos
+        section
+            include partials/_title.pug
+        .contenedor-artistas
+            section
+                a(href="/mariogiacoya")
+                    img(src="/img/1883-obra.jpg", alt="Mario Giacoya Obra")
+                a(href="/mariogiacoya") Mario Giacoya
+            section
+                a(href="/sebastianmanuele")
+                    img(src="/img/sebastian.jpg", alt="Sebastián Emanuele Obra")
+                a(href="/sebastianmanuele") Sebatián Emanuele
+            section 
+                a(href="/carolinaalbernaz")
+                    img(src="/img/caro.jpg", alt="Carolina Albernaz Obra")
+                a(href="/carolinaalbernaz") Carolina Albernaz   
+            section 
+                a(href="/fernandooliveri")
+                    img(src="/img/oliveri.jpg", alt="Carolina Albernaz Obra")
+                a(href="/fernandooliveri") Fernando Oliveri
+        include partials/_footer.pug
