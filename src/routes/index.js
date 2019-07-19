@@ -30,6 +30,43 @@ router.get('/nuestrosartistas', (req, res) =>{
   })
 })
 
+router.get('/mariogiacoya', (req, res) =>{
+  res.render('artistaId', {
+    titleArt: 'Mario Giacoya',
+    title: 'Mario Giacoya',
+    url: 'url(/img/1883-obra-gde.jpg)'
+  })
+})
+
+router.get('/sebastianmanuele', (req, res) =>{
+  res.render('artistaId', {
+    titleArt: 'Sebastián Emanuele',
+    title: 'Sebastián Emanuele',
+    url: 'url(/img/sebastian.jpg)'
+  })
+})
+
+router.get('/carolinaalbernaz', (req, res) =>{
+  res.render('artistaId', {
+    titleArt: 'Carolina Albernaz',
+    title: 'Carolina Albernaz',
+    url: 'url(/img/caro.jpg)'
+  })
+})
+router.get('/fernandooliveri', (req, res) =>{
+  res.render('artistaId', {
+    titleArt: 'Fernando Oliveri',
+    title: 'Fernando Oliveri',
+    url: 'url(/img/oliveri.jpg)'
+  })
+})
+
+router.get('/contacto', (req, res) =>{
+  res.render('contacto', {
+    titleArt: 'Contacto - Book Art & Design',
+    title: 'Contactanos'
+  })
+})
 router.post('/enviar',urlencodedParser, (req, res) => {
     
     var transporter = nodemailer.createTransport({

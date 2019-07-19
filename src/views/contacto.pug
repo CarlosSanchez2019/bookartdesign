@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title= titleArt
+        include partials/_head.pug
+    body
+        include partials/_header.pug
+        .contacto
+        section
+            include partials/_title.pug
+            aside
+                .contenedor-form
+                    h5 Contactate con nosotros
+                    form(action="/enviar", method="post")
+                        input(type="text" id="name" name="name" required )
+                        label(for="name") Nombre
+                        input(type="email" id="email" name="email" required )
+                        label(for="email") Correo Electrónico
+                        textarea(name="asuntoTxt", cols="30", rows="10" id="asuntoTxt" placeholder="Escriba Aqui")
+                        button(type="submit") Enviar
+        .contenedor-mapa
+            .titulo-mapa
+                iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209625.64207328737!2d-56.37686922799607!3d-34.82101762671745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80ffc63bf7d3%3A0x6b321b2e355bec99!2sMontevideo%2C+Departamento+de+Montevideo!5e0!3m2!1ses!2suy!4v1563533439968!5m2!1ses!2suy', style='border:0', allowfullscreen='', width='100%', height='450', frameborder='0')
+            .titulo-mapa
+                iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26198.067089058604!2d-54.668794955715924!3d-34.83716688939941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9574fad494a2c013%3A0xa653d8ad8deac302!2sJos%C3%A9+Ignacio%2C+Departamento+de+Maldonado!5e0!3m2!1ses!2suy!4v1563533527617!5m2!1ses!2suy', style='border:0', allowfullscreen='', width='100%', height='450', frameborder='0')
+        include partials/_footer.pug
