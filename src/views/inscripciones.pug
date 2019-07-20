@@ -4,7 +4,7 @@ html(lang="es")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Sobre Nosotros
+        title Inscripciones - Book Art & Design
         include partials/_head.pug
     body
         include partials/_header.pug
@@ -12,7 +12,7 @@ html(lang="es")
         section
             include partials/_title.pug
             .formulario-inscripcion
-                form(action="", method="post")
+                form(action="/inscripciones", method="post")
                     input#nombre(type="text", name="nombre", required)
                     label(for="nombre") Nombre*
                     input#apellido(type="text", name="apellido", required)

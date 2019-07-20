@@ -11,4 +11,13 @@ html(lang="es")
         .bannerArtistas(style=`background: ${url};background-attachment: fixed; background-repeat: no-repeat; background-size: cover; background-position-y: -300px;`)
         section
             include partials/_title.pug
+            .contenedor-perfil
+                .perfil-contenedor
+                    img(src=`${urlPerfil}`, alt="Foto de Perfil")
+                .curriculum
+                    p=parrafoUno 
+                    p=parrafoDos
+                    p=parrafoTres
+                    p=parrafoCuatro
+                    p=parrafoCinco
             include partials/_footer.pug
