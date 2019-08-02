@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title= titleArt
+        include partials/_head.pug
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js")
+    body
+        .modal
+            .btn-close X
+            .modal-cont
+                .modal-titulo
+                    h2 Gracias por realizar la compra
+                .modal-form
+                    form(action="/comprar", method="post")
+                        input#name(type="text" name="nombre" required autofocus)
+                        label(for="name") Nombre
+                        input#subname(type="text" name="apellido" required)
+                        label(for="subname") Apellido
+                        input#mail(type="email" name="email" required)
+                        label(for="mail") Correo Electrónico
+                        input#tel(type="text" name="tel" required)
+                        label(for="tel") Teléfono
+                        input#obra(type="text" name="obra" required)
+                        label(for="obra") Nombre de la Obra
+                        textarea(name="asunto",placeholder="Escriba Aquí" required)
+                        input(type="submit", value="Comprar")
+        include partials/_header.pug
+        .bannerArtistas(style=`background: ${url};background-attachment: fixed; background-repeat: no-repeat; background-size: cover; background-position-y: -300px;`)
+        section
+            include partials/_title.pug
+            .contenedor-obra-perfil
+                .contenedor-foto-obra
+                    a.image-popup-vertical-fit(href=`${obraUno}`)
+                        img(src=`${obraUno}`, alt="")
+                .contenedor-detalle-obra
+                    p Titulo:
+                        span=tituloObraUno
+                    p Tamaño:
+                        span=tamanoObraUno
+                    p Técnica: 
+                        span=tecnicaObraUno
+                    p Año: 
+                        span=anoObraUno
+                    p.precio Precio: 
+                        span=precio
+                    button.btn-compra Comprar
+        
+                
+
+
+            include partials/_footer.pug
+        script(src="/js/galeria.js")
+        script(src="/js/modal.js")

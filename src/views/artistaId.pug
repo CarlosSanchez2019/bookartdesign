@@ -6,9 +6,10 @@ html(lang="es")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title= titleArt
         include partials/_head.pug
+        
     body
         include partials/_header.pug
-        .bannerArtistas(style=`background: ${url};background-attachment: fixed; background-repeat: no-repeat; background-size: cover; background-position-y: -300px;`)
+        .bannerArtistas(style=`background: ${url};background-attachment: fixed; background-repeat: no-repeat; background-size: cover; `)
         section
             include partials/_title.pug
             .contenedor-perfil
@@ -20,4 +21,28 @@ html(lang="es")
                     p=parrafoTres
                     p=parrafoCuatro
                     p=parrafoCinco
+            .contenedor-galeria
+                .contenedor-galeria-foto
+                    img(src=`${obraUno}`, alt="")
+                    p=tituloObraUno
+                    p=tamanoObraUno
+                    p=tecnicaObraUno
+                    p=anoObraUno
+                    a(href=`${enlaceUno}`) Ver más
+                .contenedor-galeria-foto
+                    img(src=`${obraDos}`, alt="")
+                    p=tituloObraDos
+                    p=tamanoObraDos
+                    p=tecnicaObraDos
+                    p=anoObraDos
+                    a(href=`${enlaceDos}`) Ver más
+                .contenedor-galeria-foto
+                    img(src=`${obraTres}`, alt="")
+                    p=tituloObraTres
+                    p=tamanoObraTres
+                    p=tecnicaObraTres
+                    p=anoObraTres
+                    a(href=`${enlaceTres}`) Ver más
+                    
+
             include partials/_footer.pug

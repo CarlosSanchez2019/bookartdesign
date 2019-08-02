@@ -4,6 +4,7 @@
     --bg-primario: #444444;
     --bg-secundario: #A49FAE;  
     --texto: #A49FAE;
+    --btn-compra: #1192ee;
 }
 *{
     margin: 0;
@@ -22,7 +23,7 @@ header {
     width: 100%;
     position: fixed;
     transition: .3s;
-    z-index: 100000;
+    z-index: 100;
 }
 nav .contenedor_menu {
     display: flex;
@@ -630,6 +631,7 @@ footer{
 }
 /* --------------------------------------- */
 
+
 .contenedor-artistas{
     width: 100%;
     display: flex;
@@ -656,8 +658,214 @@ footer{
 .contenedor-artistas section img:hover{
     transform: scale(1.1);
 }
-/*  */
+/* CONTENEDOR FOTOS ARTISTAS */
+.contenedor-galeria{
+    width: 80%;
+    margin:auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contenedor-galeria .contenedor-galeria-foto{
+    width: calc((100% - 30px) / 3) ;
+    margin-bottom: 20px;
+    
+}
+.contenedor-galeria .contenedor-galeria-foto img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.contenedor-galeria .contenedor-galeria-foto p{
+    margin-top: 5px;
+    color: var(--bg-primario);
+    letter-spacing: 1px;
+}
+.contenedor-galeria .contenedor-galeria-foto a{
+    color: var(--bg-primario);
+    display: inline-block;
+    float: right;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid var(--bg-primario);
+    border-radius: 10px;
+    transition: all .5s; 
+}
+.contenedor-galeria .contenedor-galeria-foto a:hover{
+    background: var(--bg-primario);
+    color:white;
+}
+/* CONTENEDOR OBRAS PARA VENTA */
 
+.contenedor-obra-perfil{
+    width: 80%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+.contenedor-obra-perfil .contenedor-foto-obra{
+    max-width: 400px;
+
+}
+.contenedor-obra-perfil .contenedor-foto-obra img{
+    width: 100%;
+    cursor:pointer;
+}
+.contenedor-obra-perfil .contenedor-detalle-obra {
+   
+    
+    width: calc(100% - 400px);
+    margin-left: 40px;
+    
+}
+.contenedor-obra-perfil .contenedor-detalle-obra p {
+    color:#000;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contenedor-obra-perfil .contenedor-detalle-obra span {
+    
+    color: var(--bg-primario);
+    margin-left:10px; 
+    font-weight: 900;
+}
+.contenedor-obra-perfil .contenedor-detalle-obra p.precio{
+    
+    margin-top: 40px;
+    font-weight: bold;
+    color:#000;
+}
+.contenedor-obra-perfil .contenedor-detalle-obra p.precio span{
+    color:#000;
+}
+.contenedor-obra-perfil .contenedor-detalle-obra button {
+
+    background: var(--btn-compra);
+    border:none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor:pointer;
+    outline: none;
+    color:#FFF;
+    text-transform: uppercase;
+    margin-top:50px;
+}
+.modal{
+    position: fixed;
+    z-index: 1000000000000000000000000;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.5);
+    transform: translateY(-100%);
+    transition: all .5s;
+    opacity: 0;
+}
+.modal-cont{
+    width: 70%;
+    margin: auto;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255,255,255,.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+.modal-cont .modal-titulo{
+    
+    font-family: var(--font-family);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+    color: var(--bg-primario);
+}
+.modal-cont .modal-form form{
+    display: flex;
+    flex-direction: column;
+}
+.modal-cont .modal-form form input{
+    position: relative;
+    outline: none;
+    border:none;
+    background: transparent;
+    padding: 10px;
+    width: 50%;
+    margin: auto;
+    border-bottom: 1px solid var(--bg-primario);
+}
+
+.modal-cont .modal-form form label{
+
+    display:block;
+    width: 50%;
+    font-family: var(--font-family);
+    margin:auto;
+    font-size: 20px;
+    transform: translateY(-25px);
+    transition: all .5s;
+}
+.modal-cont .modal-form form input:focus + label,.modal-cont .modal-form form input:valid + label {
+    
+    transform: translateY(-45px);
+    font-size: 12px;
+    background: transparent;
+}
+.modal-cont .modal-form form input[type="submit"]{
+    background: var(--btn-compra);
+    width: auto;
+    border:none;
+    color:#FFF;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: var(--font-family);
+    letter-spacing: 1px;
+    padding: 20px;
+    cursor:pointer;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.modal-cont .modal-form form textarea{
+    outline: none;
+    border:none;
+    background: transparent;
+    padding: 10px;
+    width: 50%;
+    height: 100px;
+    margin: auto;
+    border-bottom: 1px solid var(--bg-primario);
+    resize: none;
+}
+.btn-close{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFF;
+    cursor: pointer;
+}
+.hide{
+    transform: translateY(0);
+    opacity: 1;
+}
+.volver{
+    text-decoration: none;
+    font-family: var(--font-family);
+    position: absolute;
+    top:50%;
+    left: 50%;
+    font-size: 22px;
+    transform: translate(-50%,-50%);
+    color:#FFF;
+}
 /* Medias Queries */
 @media screen and (max-width:1100px){
     nav a {
@@ -667,6 +875,28 @@ footer{
 }
 @media screen and (max-width:860px){
     
+    .contenedor-obra-perfil{
+        
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contenedor-obra-perfil .contenedor-detalle-obra {
+   
+        margin:0;
+        width: 100%;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .contenedor-galeria{
+        text-align: center;
+    }
+
+    .contenedor-galeria .contenedor-galeria-foto{
+        width: calc((100% - 30px) / 1) ;
+        
+    }
+
     .contenedor-artistas section{
         width: calc((100% - 20px) / 2);
     }
@@ -759,6 +989,15 @@ footer{
 
 @media screen and (max-width:460px){
     
+
+    .modal-cont .modal-titulo{
+        font-size: 14px;
+    }
+
+    .modal-cont .modal-form form label{
+        font-size: 12px;
+    }
+
     .contenedor-artistas section{
         width: calc((100% - 20px) / 1);
     }
