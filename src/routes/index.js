@@ -19,8 +19,14 @@ router.get('/', (req, res) => {
 
 router.get('/sobrenosotros', (req, res) => {
     res.render('sobreNosotros',{
-      title: "Sobre Nosotros"
+      title: "Staff"
     });
+});
+
+router.get('/editorial', (req, res) => {
+  res.render('editorial',{
+    title: "Nosotros"
+  });
 });
 
 router.get('/inscripciones', (req, res)  => {
@@ -137,7 +143,8 @@ router.get('/vision', (req, res) =>{
     tamanoObraUno: '140 x 110 cm',
     tecnicaObraUno:'Óleo sobre tela.',
     anoObraUno:'2017',
-    precio: 'US$ 8000'
+    precio: 'US$ 8000',
+    urlVolver:"/fernandooliveri"
   })
 })
 router.get('/astor', (req, res) =>{
@@ -150,7 +157,8 @@ router.get('/astor', (req, res) =>{
     tamanoObraUno: '120 x 150 cm',
     tecnicaObraUno:'Óleo sobre tela.',
     anoObraUno:'2017',
-    precio: 'US$ 8000'
+    precio: 'US$ 8000',
+    urlVolver:"/fernandooliveri"
   })
 })
 router.get('/la_vision_de_pablo', (req, res) =>{
@@ -163,7 +171,8 @@ router.get('/la_vision_de_pablo', (req, res) =>{
     tamanoObraUno: '150 x 120 cm',
     tecnicaObraUno:'Óleo sobre tela.',
     anoObraUno:'2017',
-    precio: 'US$ 8000'
+    precio: 'US$ 8000',
+    urlVolver:"/fernandooliveri"
   })
 })
 router.get('/granja_amanbay', (req, res) =>{
@@ -176,7 +185,8 @@ router.get('/granja_amanbay', (req, res) =>{
     tamanoObraUno: '150 x 120 cm',
     tecnicaObraUno:'Acrílico sobre tela.',
     anoObraUno:'2015',
-    precio: 'US$ 3000'
+    precio: 'US$ 3000',
+    urlVolver:"/mariogiacoya"
   })
 })
 router.get('/el_encanto_de_volar', (req, res) =>{
@@ -189,7 +199,8 @@ router.get('/el_encanto_de_volar', (req, res) =>{
     tamanoObraUno: '150 x 140 cm.',
     tecnicaObraUno:'Acrílico sobre tela.',
     anoObraUno:'2017',
-    precio: 'US$ 5000'
+    precio: 'US$ 5000',
+    urlVolver:"/mariogiacoya"
   })
 })
 router.get('/obragiacoya', (req, res) =>{
@@ -202,7 +213,8 @@ router.get('/obragiacoya', (req, res) =>{
     tamanoObraUno: '120 x 120 cm.',
     tecnicaObraUno:'Acrílico sobre tela.',
     anoObraUno:'2017',
-    precio: 'US$ 2700'
+    precio: 'US$ 2700',
+    urlVolver:"/mariogiacoya"
   })
 })
 router.get('/exito', (req, res)=>{

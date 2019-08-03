@@ -4,13 +4,27 @@ html(lang="es")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Sobre Nosotros
+        title Editorial - Book Art & Design
         include partials/_head.pug
     body
         include partials/_header.pug
         .quienessomos
         section
             include partials/_title.pug
-                
-            
+            .contenedor-equipo
+                .contenedor-cv
+                    img(src="/img/albernaz/109fotoautor.jpg", alt="")
+                    h3 Carolina Albernaz
+                    a(href="") Directora - Editora
+                    p.frase Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolorum debitis quae quam, nesciunt voluptates.
+                .contenedor-cv
+                    img(src="/img/manuele/199fotoautor.jpg", alt="")
+                    h3 Sebastián Manuele
+                    a(href="") Director - Editor
+                    p.frase Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolorum debitis quae quam, nesciunt voluptates.
+                .contenedor-cv
+                    img(src="/img/carlos.jpg", alt="")
+                    h3 Carlos Sánchez
+                    a(href="") Director Comercial
+                    p.frase "Piensa, cree, sueña, atrévete"
         include partials/_footer.pug
