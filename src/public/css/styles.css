@@ -6,6 +6,9 @@
     --texto: #A49FAE;
     --btn-compra: #1192ee;
 }
+html {
+    scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;
@@ -975,6 +978,101 @@ footer{
     font-style: italic;
     margin-top: 10px;
 }
+/* MUSEOS */
+.quienessomos-museos{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(/img/registro.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -250px;
+}
+
+.contenedor-museos-lista{
+    width: 80%;
+    margin: 30px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+section section.contenedor-museos-lista h2{
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+section .contenedor-museos-lista .depto{
+    
+    margin: 50px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+section .contenedor-museos-lista .listas {
+
+    margin-bottom: 15px;
+}
+section .contenedor-museos-lista .listas p{
+
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--bg-primario);
+}
+section .contenedor-museos-lista .listas p span{
+    
+    color: #000;
+    margin-left: 5px;
+    font-weight: 700;    
+}
+.opciones{
+    width: 100%;
+    position: relative;
+}
+.opciones p{
+    position: absolute;
+    top:0;
+    right: 0;
+    font-weight: 700;
+}
+.opciones .selector {
+    width: 100px;
+    height: 25px;
+    border: 1px solid black;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    z-index: 10;
+    cursor: pointer;
+    background: #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.opciones .selector:hover{
+    height: auto;
+    border-radius: 10px;
+}
+.opciones .selector li{
+    list-style: none;
+}
+.opciones .selector li a{
+    color: #000;
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+    margin-left: 5px;
+    font-weight: 700;
+}
+.opciones .selector li a:hover{
+    color: #FFF;
+}
+.subir{
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    cursor: pointer;
+}
+.subir a{
+    color:#000;
+    
+}
 
 /* Medias Queries */
 @media screen and (max-width:1100px){
@@ -985,6 +1083,18 @@ footer{
 }
 @media screen and (max-width:860px){
     
+    section .contenedor-museos-lista .listas p{
+
+        
+        font-size: .8rem;
+        
+    }
+
+    .quienessomos-museos{
+        height: 25vh;
+        background-position-y: -250px;
+    }
+
     .quienessomos{
         height: 25vh;
         background-position-y: -250px;
@@ -1106,10 +1216,15 @@ footer{
     .curriculum{
         margin-top: 30px;
     }
+    .quienessomos-museos{
+        
+        background-position-y:-450px;
+    }
 }
 
 @media screen and (max-width:460px){
     
+
     .contenedor-sobre{
         text-align: center;
     }

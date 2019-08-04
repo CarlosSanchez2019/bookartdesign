@@ -1,0 +1,31 @@
+const oliveri = {
+    titleArt: 'Fernando Oliveri',
+    title: 'Fernando Oliveri',
+    url: 'url(/img/oliveri.jpg)',
+    urlPerfil: '/img/oliveri/189fotoautor.jpg',
+    parrafoUno:'Fernando Oliveri (Montevideo,11 de Agosto de 1957) es pintor Uruguayo. En 1978 se traslada a Montevideo donde ingresa a la Escuela de Bellas Artes San Fco de Asís a cargo del pintor Clever Lara donde permanece hasta el año 1981.',
+    parrafoDos:'Luego concurre al taller del reconocido pintor uruguayo Gustavo Alamon, donde permanece por espacio de 8 años. Luego en el 1986 asiste al Club de Grabado de Montevideo',
+    parrafoTres:'Desde 1982 hasta la fecha ha participado en diferentes exposiciones individuales y colectivas en el país y en el exterior, obteniendo premios y distinciones. Representa a Uruguay en el X Salón de Arte Iberoamericano en el Instituto Cultural Mexicano (Washington DC- EE.UU) también representa a Uruguay en Arte Contemporáneo de America Latina en Corea. ',
+    parrafoCuatro:'En el año 2000 crea su propio taller hasta la fecha.',
+    parrafoCinco: 'Sus obras se encuentran en entidades públicas y privadas en Uruguay, Argentina, Brasil, Venezuela, Irlanda, Puerto Rico, Alemania, Francia, EE.UU, Emiratos Árabes, Corea del Sur, entre otros.',
+    obraUno:'img/oliveri/obra1.jpg',
+    obraDos: 'img/oliveri/obra2.jpg', 
+    obraTres:'img/oliveri/obra3.jpg',
+    tituloObraUno:'Título: Visión',
+    tamanoObraUno: 'Tamaño: 140 x 110 cm',
+    tecnicaObraUno:'Técnica: Óleo sobre tela.',
+    anoObraUno:'Año: 2017',
+    tituloObraDos:'Título: Astor.',
+    tamanoObraDos: 'Tamaño: 120 x 150 cm',
+    tecnicaObraDos:'Técnica: Óleo sobre tela.',
+    anoObraDos:'Año: 2017',
+    tituloObraTres:'Título: La Visión de Pablo',
+    tamanoObraTres: 'Tamaño: 150 x 120 cm',
+    tecnicaObraTres:'Técnica: Óleo sobre tela.',
+    anoObraTres:'Año: 2017',
+    enlaceUno:'/vision',
+    enlaceDos:'/astor',
+    enlaceTres:'/la_vision_de_pablo'
+
+}
+module.exports = oliveri
