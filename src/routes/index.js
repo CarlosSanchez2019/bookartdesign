@@ -644,6 +644,7 @@ router.get('/montevideo', (req, res) =>{
     ]
   })
 })
+
 router.get('/santalucia', (req, res) =>{
   res.render('departamento', {
     title: 'Santa Lucía',
