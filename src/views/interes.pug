@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Lugares de Interes - Book Art & Design
+        include partials/_head.pug
+    body
+        include partials/_header.pug
+        .contenedor-interes
+            .interes.metropolitana
+                a(href="/metropolitana") Región Metropolitana
+            .interes.centro-sur
+                a(href="/centrosur") Región Centro - Sur
+            .interes.este
+                a(href="/este") Región Este
+            .interes.norte
+                a(href="/norte") Región Norte
+            .interes.rio-uruguay
+                a(href="rio-uruguay") Región Río Uruguay
+        .referencia
+            a(href="https://turismo.gub.uy/index.php/lugares-para-ir" target="_blank" nofollow) Fuente Min. de Túrismo 
+
+        include partials/_footer.pug

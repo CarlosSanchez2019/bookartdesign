@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Economica:400,400i,700,700i&display=swap');
+
 :root{
     --font-family:'Economica', sans-serif;
     --bg-primario: #444444;
@@ -119,10 +120,34 @@ nav .submenu:hover ul {
     width: 100%;
     height: 100vh;
     position: relative;
-    background: url(/img/inicio.jpg);
+    /* background: url(/img/inicio.jpg); */
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    animation: animacion 20s alternate infinite;
+}
+@keyframes animacion {
+    0%{
+        background: url(/img/inicio.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }33%{
+        background: url(/img/registro.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }66%{
+        background: url(/img/contacto.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }100%{
+        background: url(/img/quienessomos.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
 .slider h1, .slider a{
@@ -248,22 +273,22 @@ section article.ediciones a{
 
 /* -------------------------------------- */
 
-.contenedor-gral{
+/* .contenedor-gral{
     margin-top: 50px;
     width: 100%;
     overflow: hidden;
     position: relative;
-}
+} */
 
-.contendor-artistas{
+/* .contendor-artistas{
     width: 300%;
     display:flex;
     
-}
-.contendor-artistas .contendor-slider{
+} */
+/* .contendor-artistas .contendor-slider{
     width: 100%;
     
-}
+} */
 .contendor-artistas .contendor-slider img{
     width: 100%;
     object-fit: contain;
@@ -362,7 +387,7 @@ aside textarea {
 }
 /* ---------------------------------- */
 .cita{
-    margin-top: 10px;
+    margin-top: 50px;
     width: 100%;
     height: 80vh;
     display: flex;
@@ -1073,6 +1098,161 @@ section .contenedor-museos-lista .listas p span{
     color:#000;
     
 }
+/* INTERES LUGARES */
+.contenedor-interes{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.interes{
+    width: calc(100% / 5);
+    transition: all 1s;
+    position: relative;
+}
+
+.metropolitana{
+    background: url(/img/montevideo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.centro-sur{
+    background: url(/img/centro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.este{
+    background: url(/img/punta.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.norte{
+    background: url(/img/norte.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -200px;
+}
+.rio-uruguay{
+    background: url(/img/rio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.interes a{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    color:#FFF;
+    width: 80%;
+    text-align: center;
+    font-family: var(--font-family);
+    font-weight: 700;
+}
+.referencia{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.referencia a{
+    color:#000;
+    width: 80%;
+    text-align: center;
+    font-family: var(--font-family);
+    font-weight: 700;
+}
+/* INTERES DEPTO */
+.contenedor-depto-titulo{
+    width: 80%;
+    margin: 40px auto;
+    
+}
+.contenedor-depto-titulo h1{
+    font-family: var(--font-family);
+    font-weight: 700;
+    text-align: center;
+}
+.contenedor-ciudades{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.contenedor-ciudades .ciudades{
+    width: calc(100% / 4);
+    height: 200px;
+    position: relative;
+}
+.contenedor-ciudades .ciudades img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contenedor-ciudades .ciudades a{
+    position: absolute;
+    z-index: 100;
+    display: block;
+    background: #00528C;
+    color: #FFF;
+    font-family: var(--font-family);
+    font-weight: 700;
+    letter-spacing: 1px;
+    width: 50%;
+    text-align: center;
+    padding: 10px 20px;
+    bottom: 20px;
+    right: 0;
+}
+.contenedor-historia{
+    width: 80%;
+    margin:auto;
+}
+.contenedor-historia p{
+    font-family: var(--font-family);
+    font-size: 1.1rem;
+    text-align: justify;
+    margin-bottom: 15px;
+    display: flex;
+}
+.contenedorinteres{
+    width: 80%;
+    margin: 20px auto;
+}
+.interesciudad{
+    display: flex;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.interesciudad img{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+.citas{
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 80%;
+    flex-direction: column;
+}
+
+.citas h3{
+    font-family: var(--font-family);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: #2D4C85;
+}
+.citas p{
+    width: 500px;
+    font-family: var(--font-family);
+    text-align: justify;
+}
+
 
 /* Medias Queries */
 @media screen and (max-width:1100px){
@@ -1082,6 +1262,62 @@ section .contenedor-museos-lista .listas p span{
     }
 }
 @media screen and (max-width:860px){
+
+    .citas{
+        align-items: center;
+        margin-left:0; 
+    }
+    .citas p{
+        width: 300px;
+        
+    }
+    .interesciudad{
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }    
+    .interesciudad img{
+        width: 300px;
+
+    }
+    .interesciudad:nth-child(even){
+        flex-direction: column;
+    }
+    .contenedor-ciudades .ciudades{
+        width: calc(100% / 2);
+                
+    }
+    /*  */
+    .contenedor-interes{
+       flex-direction: column;
+       
+    }
+    .interes{
+        width: 100%;
+        height: calc(100vh / 5);
+    }
+    .metropolitana{
+        background-position-y: -80px;
+    }
+    .centro-sur{
+        background-position-y: -100px;
+        
+    }
+    .este{
+        background-position-y: -340px;
+
+    }
+    .norte{
+        background-position-y: -270px;
+        background-position-x: 0;
+
+
+    }
+    .rio-uruguay{
+        background-position-y: -200px;
+        
+    }
     
     section .contenedor-museos-lista .listas p{
 
@@ -1224,7 +1460,32 @@ section .contenedor-museos-lista .listas p span{
 
 @media screen and (max-width:460px){
     
+    .contenedor-ciudades .ciudades{
+        width: calc(100% / 1);
+                
+    }
 
+    .metropolitana {
+        background-position-y: -22px;
+    }
+    .centro-sur{
+        background-position-y: -138pxpx;
+        
+    }
+    .este{
+        background-position-y: 0px;
+
+    }
+    .norte{
+        background-position-y: -95px;
+        background-position-x: 0;
+
+
+    }
+    .rio-uruguay{
+        background-position-y: -200px;
+        
+    }   
     .contenedor-sobre{
         text-align: center;
     }

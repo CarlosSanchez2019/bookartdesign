@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title=titleUrl
+        include partials/_head.pug
+    body
+        include partials/_header.pug
+        .contenedor-depto(style=`width: 100%;height: 50vh; background: ${url};background-repeat: no-repeat; background-size: cover; background-position-y: ${tamanoUrl};`)
+        .contenedor-depto-titulo
+            h1=title
+        .contenedor-historia
+            p=parrafoUno
+            p=parrafoDos
+            p=parrafoTres
+            p=parrafoCuatro
+            p=parrafoCinco
+        .contenedorinteres
+            each ciudad in ciudadArreglo
+                .interesciudad
+                    img(src=`${ciudad.foto}`, alt="")
+                    .citas
+                        h3=ciudad.citatitulo
+                        p=ciudad.cita
+
+        include partials/_footer.pug

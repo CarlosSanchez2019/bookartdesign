@@ -13,6 +13,6 @@ close.addEventListener('click', ()  => {
 window.addEventListener('keyup', e  => {
     
     if(e.keyCode===27){
-        modal.classList.toggle('hide')
+        modal.classList.remove('hide')
     }
 })
