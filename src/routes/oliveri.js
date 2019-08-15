@@ -15,24 +15,33 @@ router.get('/fernandooliveri', (req, res) =>{
       parrafoTres: oliveri.parrafoTres,
       parrafoCuatro: oliveri.parrafoCuatro,
       parrafoCinco: oliveri.parrafoCinco,
-      obraUno: oliveri.obraUno,
-      obraDos: oliveri.obraDos, 
-      obraTres: oliveri.obraTres,
-      tituloObraUno:oliveri.tituloObraUno,
-      tamanoObraUno: oliveri.tamanoObraUno,
-      tecnicaObraUno:oliveri.tecnicaObraUno,
-      anoObraUno:oliveri.anoObraUno,
-      tituloObraDos: oliveri.tituloObraDos,
-      tamanoObraDos: oliveri.tamanoObraDos,
-      tecnicaObraDos: oliveri.tecnicaObraDos,
-      anoObraDos:oliveri.anoObraDos,
-      tituloObraTres: oliveri.tituloObraTres,
-      tamanoObraTres: oliveri.tamanoObraTres,
-      tecnicaObraTres:oliveri.tecnicaObraTres,
-      anoObraTres:oliveri.anoObraTres,
-      enlaceUno:oliveri.enlaceUno,
-      enlaceDos:oliveri.enlaceDos,
-      enlaceTres:oliveri.enlaceTres
+      general: [
+        {
+          obra: oliveri.obraUno,
+          titulo: oliveri.tituloObraUno,
+          tamano: oliveri.tamanoObraUno,
+          tecnica: oliveri.tecnicaObraUno,
+          ano: oliveri.anoObraUno,
+          enlace: oliveri.enlaceUno
+        },
+        {
+          obra: oliveri.obraDos,
+          titulo: oliveri.tituloObraDos,
+          tamano: oliveri.tamanoObraDos,
+          tecnica: oliveri.tecnicaObraDos,
+          ano: oliveri.anoObraDos,
+          enlace: oliveri.enlaceDos
+        },
+        {
+          obra: oliveri.obraTres,
+          titulo: oliveri.tituloObraTres,
+          tamano: oliveri.tamanoObraTres,
+          tecnica: oliveri.tecnicaObraTres,
+          ano: oliveri.anoObraTres,
+          enlace: oliveri.enlaceTres
+        }
+      ]
+      
     })
   })
 

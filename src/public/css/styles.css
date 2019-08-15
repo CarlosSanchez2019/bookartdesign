@@ -1169,6 +1169,14 @@ section .contenedor-museos-lista .listas p span{
     margin: 40px auto;
     
 }
+.contenedor-depto{
+    width: 100%;
+}
+.contenedor-depto img{
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+}
 .contenedor-depto-titulo h1{
     font-family: var(--font-family);
     font-weight: 700;

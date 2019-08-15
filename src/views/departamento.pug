@@ -8,7 +8,9 @@ html(lang="es")
         include partials/_head.pug
     body
         include partials/_header.pug
-        .contenedor-depto(style=`width: 100%;height: 50vh; background: ${url};background-repeat: no-repeat; background-size: cover; background-position-y: ${tamanoUrl};`)
+        //- .contenedor-depto(style=`width: 100%;height: 50vh; background: ${url};background-repeat: no-repeat; background-size: cover; background-position-y: ${tamanoUrl};`)
+        .contenedor-depto
+            img(src=`${url}`, alt="")
         .contenedor-depto-titulo
             h1=title
         .contenedor-historia

@@ -15,24 +15,33 @@ router.get('/mariogiacoya', (req, res) =>{
       parrafoTres: giacoya.parrafoTres,
       parrafoCuatro: giacoya.parrafoCuatro,
       parrafoCinco: giacoya.parrafoCinco,
-      obraUno: giacoya.obraUno,
-      obraDos: giacoya.obraDos, 
-      obraTres: giacoya.obraTres,
-      tituloObraUno:giacoya.tituloObraUno,
-      tamanoObraUno: giacoya.tamanoObraUno,
-      tecnicaObraUno:giacoya.tecnicaObraUno,
-      anoObraUno:giacoya.anoObraUno,
-      tituloObraDos: giacoya.tituloObraDos,
-      tamanoObraDos: giacoya.tamanoObraDos,
-      tecnicaObraDos: giacoya.tecnicaObraDos,
-      anoObraDos:giacoya.anoObraDos,
-      tituloObraTres: giacoya.tituloObraTres,
-      tamanoObraTres: giacoya.tamanoObraTres,
-      tecnicaObraTres:giacoya.tecnicaObraTres,
-      anoObraTres:giacoya.anoObraTres,
-      enlaceUno:giacoya.enlaceUno,
-      enlaceDos:giacoya.enlaceDos,
-      enlaceTres:giacoya.enlaceTres
+      general: [
+        {
+          obra: giacoya.obraUno,
+          titulo: giacoya.tituloObraUno,
+          tamano: giacoya.tamanoObraUno,
+          tecnica: giacoya.tecnicaObraUno,
+          ano: giacoya.anoObraUno,
+          enlace: giacoya.enlaceUno
+        },
+        {
+          obra: giacoya.obraDos,
+          titulo: giacoya.tituloObraDos,
+          tamano: giacoya.tamanoObraDos,
+          tecnica: giacoya.tecnicaObraDos,
+          ano: giacoya.anoObraDos,
+          enlace: giacoya.enlaceDos
+        },
+        {
+          obra: giacoya.obraTres,
+          titulo: giacoya.tituloObraTres,
+          tamano: giacoya.tamanoObraTres,
+          tecnica: giacoya.tecnicaObraTres,
+          ano: giacoya.anoObraTres,
+          enlace: giacoya.enlaceTres
+        }
+      ]
+      
     })
 })
 

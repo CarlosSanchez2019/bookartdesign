@@ -22,27 +22,15 @@ html(lang="es")
                     p=parrafoCuatro
                     p=parrafoCinco
             .contenedor-galeria
-                .contenedor-galeria-foto
-                    img(src=`${obraUno}`, alt="")
-                    p=tituloObraUno
-                    p=tamanoObraUno
-                    p=tecnicaObraUno
-                    p=anoObraUno
-                    a(href=`${enlaceUno}`) Ver más
-                .contenedor-galeria-foto
-                    img(src=`${obraDos}`, alt="")
-                    p=tituloObraDos
-                    p=tamanoObraDos
-                    p=tecnicaObraDos
-                    p=anoObraDos
-                    a(href=`${enlaceDos}`) Ver más
-                .contenedor-galeria-foto
-                    img(src=`${obraTres}`, alt="")
-                    p=tituloObraTres
-                    p=tamanoObraTres
-                    p=tecnicaObraTres
-                    p=anoObraTres
-                    a(href=`${enlaceTres}`) Ver más
+                each artista in general
+                    .contenedor-galeria-foto
+                        img(src=`${artista.obra}`, alt="")
+                        p=artista.titulo
+                        p=artista.tamano
+                        p=artista.tecnica
+                        p=artista.ano
+                        a(href=`${artista.enlace}`) Ver más
+
                     
 
             include partials/_footer.pug
